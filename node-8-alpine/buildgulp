@@ -1,0 +1,4 @@
+#!/bin/ash
+
+/usr/bin/bundler install
+/usr/local/bin/gulp build $@
