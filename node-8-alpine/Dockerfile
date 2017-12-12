@@ -6,4 +6,5 @@ RUN apk update && apk upgrade && apk --update add \
     && rm -rf /var/cache/apk/* \
     &&  echo 'gem: --no-document' > /etc/gemrc
 COPY buildgulp /usr/local/bin/buildgulp
-RUN gem install bundler && chmod +x /usr/local/bin/buildgulp
+COPY buildui /usr/local/bin/buildui
+RUN gem install bundler && chmod +x /usr/local/bin/buildgulp && chmod +x /usr/local/bin/buildui
