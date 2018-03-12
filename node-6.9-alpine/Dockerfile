@@ -8,4 +8,4 @@ RUN apk update && apk upgrade && apk --update add \
 COPY buildgulp /usr/local/bin/buildgulp
 COPY buildui /usr/local/bin/buildui
 RUN gem install bundler && chmod +x /usr/local/bin/buildgulp && chmod +x /usr/local/bin/buildui
-CMD tail -f /dev/null
+CMD ["tail -f /dev/null"]
