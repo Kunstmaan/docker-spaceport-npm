@@ -2,7 +2,8 @@ FROM mkenney/npm:node-6.9-alpine
 
 RUN apk update && apk upgrade && apk --update add \
     ruby ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json ruby-dev ruby-bundler \
-    libstdc++ tzdata bash ca-certificates \
+    libstdc++ tzdata bash ca-certificates automake git alpine-sdk nasm autoconf build-base \
+    zlib zlib-dev libpng libpng-dev libwebp libwebp-dev libjpeg-turbo libjpeg-turbo-dev \
     && rm -rf /var/cache/apk/* \
     &&  echo 'gem: --no-document' > /etc/gemrc
 COPY buildgulp /usr/local/bin/buildgulp
