@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+# Delete old node_modules
+rm -rf node_modules
+
+/usr/bin/bundler install
+/usr/local/bin/npm install
+/usr/local/bin/npm run build
