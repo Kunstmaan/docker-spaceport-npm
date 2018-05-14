@@ -30,3 +30,7 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_
 
     return ret;
 }
+
+// This avoids permission issues we don't care about when running ntfs
+int chown() { return 0; }
+int fchown() { return 0; }
